@@ -44,6 +44,36 @@ flutter:
   assets:
   - images/Logo.png
 
+  #Imagens do tecido conjuntivo
+  - images/laminas/tecidoconjuntivo/cartilaginoso_hialino/x100.jpg
+  - images/laminas/tecidoconjuntivo/cartilaginoso_hialino/x400.jpg
+  - images/laminas/tecidoconjuntivo/cartilaginoso_hialino/capa.jpg
+  - images/laminas/tecidoconjuntivo/tecido_sanguineo/x40.jpg
+  - images/laminas/tecidoconjuntivo/tecido_sanguineo/x100.jpg
+  - images/laminas/tecidoconjuntivo/tecido_sanguineo/x200.jpg
+  - images/laminas/tecidoconjuntivo/tecido_sanguineo/x400.jpg
+  - images/laminas/tecidoconjuntivo/tecido_sanguineo/capa.jpg
+  #Imagens do tecido epitelial
+  - images/laminas/tecidoepitelial/glandular_exocrino_acinoso_de_secreção_holocrina/x200.jpg
+  - images/laminas/tecidoepitelial/glandular_exocrino_acinoso_de_secreção_holocrina/x400.jpg
+  - images/laminas/tecidoepitelial/glandular_exocrino_acinoso_de_secreção_holocrina/capa.jpg
+  - images/laminas/tecidoepitelial/glandular_exocrino_tubular_espiralado_simples/x40.jpg
+  - images/laminas/tecidoepitelial/glandular_exocrino_tubular_espiralado_simples/capa.jpg
+  #Imagens do tecido muscular
+  - images/laminas/tecidomuscular/estriado_esqueletico/x400.jpg
+  - images/laminas/tecidomuscular/estriado_esqueletico/capa.jpg
+  - images/laminas/tecidomuscular/liso/x400.jpg
+  - images/laminas/tecidomuscular/liso/capa.jpg
+  #Imagens do tecido nervoso
+  - images/laminas/tecidonervoso/cerebelo/x40.jpg
+  - images/laminas/tecidonervoso/cerebelo/x100.jpg
+  - images/laminas/tecidonervoso/cerebelo/x400.jpg
+  - images/laminas/tecidonervoso/cerebelo/capa.jpg
+  - images/laminas/tecidonervoso/medula_espinhal/x40.jpg
+  - images/laminas/tecidonervoso/medula_espinhal/x100.jpg
+  - images/laminas/tecidonervoso/medula_espinhal/x400.jpg
+  - images/laminas/tecidonervoso/medula_espinhal/capa.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

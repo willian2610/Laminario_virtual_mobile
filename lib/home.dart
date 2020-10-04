@@ -5,14 +5,18 @@ import 'package:laminario_virtual_mobile/info.dart';
 import 'package:laminario_virtual_mobile/main_page.dart';
 
 class HomePage extends StatefulWidget {
+  HomePage({this.currentIndex});
+  int currentIndex;
+
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomePageState createState() => _HomePageState(currentIndex: currentIndex);
 }
 
 class _HomePageState extends State<HomePage> {
+  _HomePageState({this.currentIndex});
   //Criação do índice responsável pela navegação entre as telas do aplicativo
   @override
-  int _currentIndex = 0;
+  int currentIndex;
   //Lista com as classes das interfaces que serão invocadas pela barra de navegação
   final List<Widget> _children = [
     MainPage(),
@@ -36,7 +40,7 @@ class _HomePageState extends State<HomePage> {
 
       //Construção do corpo da aplicação.
       //Neste momento, a classe do índice que é setado na ação do clique dos botões da barra inferior é invocada
-      body: _children[_currentIndex],
+      body: _children[currentIndex],
 
       //Construção da barra inferior de navegação
       bottomNavigationBar: BottomNavigationBar(
@@ -44,7 +48,7 @@ class _HomePageState extends State<HomePage> {
         selectedItemColor: Colors.purple,
         unselectedItemColor: Colors.grey,
         onTap: onTabTapped,
-        currentIndex: _currentIndex,
+        currentIndex: currentIndex,
         items: [
           new BottomNavigationBarItem(
               icon: Icon(Icons.home),
@@ -70,7 +74,7 @@ class _HomePageState extends State<HomePage> {
   //Função que atualiza a variavel _currentIndex toda vez que um dos botões da barra de navegação é acionado
   void onTabTapped (int index){
     setState(() {
-      _currentIndex = index;
+      currentIndex = index;
     });
   }
 

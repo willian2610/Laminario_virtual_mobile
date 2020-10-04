@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Laminário Virtual - UFCSPA',
-      home: HomePage(),
+      home: HomePage(currentIndex: 0,),
     );
   }
 }
