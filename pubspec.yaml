@@ -19,6 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  carousel_pro: ^1.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -73,7 +74,43 @@ flutter:
   - images/laminas/tecidonervoso/medula_espinhal/x100.jpg
   - images/laminas/tecidonervoso/medula_espinhal/x400.jpg
   - images/laminas/tecidonervoso/medula_espinhal/capa.jpg
-
+  #Imagens do sistema cardiovascular
+  - images/laminas/sistemacardiovascular/aorta/x40.jpg
+  - images/laminas/sistemacardiovascular/aorta/capa.jpg
+  - images/laminas/sistemacardiovascular/veia_media_e_aorta_media/x40.jpg
+  - images/laminas/sistemacardiovascular/veia_media_e_aorta_media/x200.jpg
+  - images/laminas/sistemacardiovascular/veia_media_e_aorta_media/capa.jpg
+  #Imagens do sistema reprodutor feminino
+  - images/laminas/sistemareprodutorfeminino/tuba_uterina/capa.jpg
+  - images/laminas/sistemareprodutorfeminino/tuba_uterina/x40.jpg
+  - images/laminas/sistemareprodutorfeminino/tuba_uterina/x100.jpg
+  - images/laminas/sistemareprodutorfeminino/tuba_uterina/x400.jpg
+  - images/laminas/sistemareprodutorfeminino/utero/capa.jpg
+  - images/laminas/sistemareprodutorfeminino/utero/x40.jpg
+  - images/laminas/sistemareprodutorfeminino/utero/x100.jpg
+  - images/laminas/sistemareprodutorfeminino/utero/x200.jpg
+  - images/laminas/sistemareprodutorfeminino/utero/x400.jpg
+  #Imagens do Sistema Reprodutor Masculino
+  - images/laminas/sistemareprodutormasculino/prostata/capa.jpg
+  - images/laminas/sistemareprodutormasculino/prostata/x40.jpg
+  - images/laminas/sistemareprodutormasculino/prostata/x100.jpg
+  - images/laminas/sistemareprodutormasculino/prostata/x200.jpg
+  - images/laminas/sistemareprodutormasculino/prostata/x400.jpg
+  - images/laminas/sistemareprodutormasculino/testiculo/capa.jpg
+  - images/laminas/sistemareprodutormasculino/testiculo/x40.jpg
+  - images/laminas/sistemareprodutormasculino/testiculo/x100.jpg
+  - images/laminas/sistemareprodutormasculino/testiculo/x200.jpg
+  - images/laminas/sistemareprodutormasculino/testiculo/x400.jpg
+  - #Imagens do Sistema Respiratório
+  - images/laminas/sistemarespiratorio/pulmao/capa.jpg
+  - images/laminas/sistemarespiratorio/pulmao/x40.jpg
+  - images/laminas/sistemarespiratorio/pulmao/x100.jpg
+  - images/laminas/sistemarespiratorio/pulmao/x200.jpg
+  - images/laminas/sistemarespiratorio/pulmao/x400.jpg
+  - images/laminas/sistemarespiratorio/traqueia/capa.jpg
+  - images/laminas/sistemarespiratorio/traqueia/x40.jpg
+  - images/laminas/sistemarespiratorio/traqueia/x100.jpg
+  - images/laminas/sistemarespiratorio/traqueia/x400.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

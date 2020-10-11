@@ -37,7 +37,7 @@ class HistBasicaPage extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           child: Text(
                               'TECIDO CONJUNTIVO',
-                              style: TextStyle(fontSize: 30)
+                            style: TextStyle(fontSize: 25), textAlign: TextAlign.center,
                           ),
                         )
                     ),
@@ -58,7 +58,7 @@ class HistBasicaPage extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           child: Text(
                               'TECIDO EPITELIAL',
-                              style: TextStyle(fontSize: 30)
+                              style: TextStyle(fontSize: 25), textAlign: TextAlign.center,
                           ),
                         )
                     ),
@@ -79,7 +79,7 @@ class HistBasicaPage extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           child: Text(
                               'TECIDO MUSCULAR',
-                              style: TextStyle(fontSize: 30)
+                              style: TextStyle(fontSize: 25), textAlign: TextAlign.center,
                           ),
                         )
                     ),
@@ -100,7 +100,7 @@ class HistBasicaPage extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           child: Text(
                               'TECIDO NERVOSO',
-                              style: TextStyle(fontSize: 30)
+                              style: TextStyle(fontSize: 25), textAlign: TextAlign.center,
                           ),
                         )
                     ),
