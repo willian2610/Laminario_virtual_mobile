@@ -128,7 +128,7 @@ class SelecaoDeLamina extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage(currentIndex: 1,)));
+                                    builder: (context) => VisualizacaoLamina(categoria: epitelialPath[i],)));
                           },
                           child: Column(
                             children: <Widget>[
@@ -182,7 +182,7 @@ class SelecaoDeLamina extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage(currentIndex: 1,)));
+                                    builder: (context) => VisualizacaoLamina(categoria: muscularPath[i],)));
                           },
                           child: Column(
                             children: <Widget>[
@@ -213,13 +213,13 @@ class SelecaoDeLamina extends StatelessWidget {
         //Categoria: TECIDO NERVOSO
         if(categoria=="Tecido Nervoso"){
           backButtonIndex = 1;
-          List muscularPath = ["cerebelo", "medula_espinhal"];//Nome da pasta de armazenamento
-          List muscularExibicao = ["Cerebelo", "Medula Espinhal"];//Nome para exibição
+          List nervosoPath = ["cerebelo", "medula_espinhal"];//Nome da pasta de armazenamento
+          List nervosoExibicao = ["Cerebelo", "Medula Espinhal"];//Nome para exibição
 
           //Laço de repetição que gera os cards das lâminas
-          for(int i=0; i<muscularPath.length;i++) {
-            String caminho_imagem_capa = "images/laminas/tecidonervoso/"+muscularPath[i]+"/capa.jpg";
-            String titulo_card = muscularExibicao[i];
+          for(int i=0; i<nervosoPath.length;i++) {
+            String caminho_imagem_capa = "images/laminas/tecidonervoso/"+nervosoPath[i]+"/capa.jpg";
+            String titulo_card = nervosoExibicao[i];
 
             //Gera o card
             widgets.add(
@@ -236,7 +236,7 @@ class SelecaoDeLamina extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage(currentIndex: 1,)));
+                                    builder: (context) => VisualizacaoLamina(categoria: nervosoPath[i],)));
                           },
                           child: Column(
                             children: <Widget>[

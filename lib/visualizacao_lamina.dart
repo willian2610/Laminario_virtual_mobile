@@ -35,6 +35,7 @@ class VisualizacaoLamina extends StatelessWidget {
       String titulo, texto, diretorio;
 
       //Testes para atribuição de valores às variáveis uteis
+      //TECIDO CONJUNTIVO
       if(categoria=="cartilaginoso_hialino"){
         backButtonIndex = "Tecido Conjuntivo";
         diretorio = "tecidoconjuntivo/cartilaginoso_hialino";
@@ -47,6 +48,46 @@ class VisualizacaoLamina extends StatelessWidget {
         titulo = Strings.tecidoSanguineoTitulo;
         texto = Strings.tecidoSanguineoTexto;
       }
+      //TECIDO EPITELIAL
+      if(categoria=="glandular_exocrino_acinoso_de_secreção_holocrina"){
+        backButtonIndex = "Tecido Epitelial";
+        diretorio = "tecidoepitelial/glandular_exocrino_acinoso_de_secreção_holocrina";
+        titulo = Strings.tecidoGlandularExocrinoAcinosoTitulo;
+        texto = Strings.tecidoGlandularExocrinoAcinosoTexto;
+      }
+      if(categoria=="glandular_exocrino_tubular_espiralado_simples"){
+        backButtonIndex = "Tecido Epitelial";
+        diretorio = "tecidoepitelial/glandular_exocrino_tubular_espiralado_simples";
+        titulo = Strings.tecidoGlandularExocrinoTubularTitulo;
+        texto = Strings.tecidoGlandularExocrinoTubularTexto;
+      }
+      //TECIDO MUSCULAR
+      if(categoria=="estriado_esqueletico"){
+        backButtonIndex = "Tecido Muscular";
+        diretorio = "tecidomuscular/estriado_esqueletico";
+        titulo = Strings.tecidoEstriadoEsqueleticoTitulo;
+        texto = Strings.tecidoEstriadoEsqueleticoTexto;
+      }
+      if(categoria=="liso"){
+        backButtonIndex = "Tecido Muscular";
+        diretorio = "tecidomuscular/liso";
+        titulo = Strings.tecidoLisoTitulo;
+        texto = Strings.tecidoLisoTexto;
+      }
+      //TECIDO NERVOSO
+      if(categoria=="cerebelo"){
+        backButtonIndex = "Tecido Nervoso";
+        diretorio = "tecidonervoso/cerebelo";
+        titulo = Strings.cerebeloTitulo;
+        texto = Strings.cerebeloTexto;
+      }
+      if(categoria=="medula_espinhal"){
+        backButtonIndex = "Tecido Nervoso";
+        diretorio = "tecidonervoso/medula_espinhal";
+        titulo = Strings.medulaEspinhalTitulo;
+        texto = Strings.medulaEspinhalTexto;
+      }
+
 
       //Cria uma lista de cards
       List<Widget> ConjuntoDeWidgets (){
