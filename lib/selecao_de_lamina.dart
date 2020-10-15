@@ -269,13 +269,13 @@ class SelecaoDeLamina extends StatelessWidget {
         //Categoria: SISTEMA CARDIOVASCULAR
         if(categoria=="Sistema Cardiovascular"){
           backButtonIndex = 2;
-          List muscularPath = ["aorta", "veia_media_e_aorta_media"];//Nome da pasta de armazenamento
-          List muscularExibicao = ["Aorta", "Veia Média e Aorta Média"];//Nome para exibição
+          List cardiovascularPath = ["aorta", "veia_media_e_aorta_media"];//Nome da pasta de armazenamento
+          List cardiovascularExibicao = ["Aorta", "Veia Média e Aorta Média"];//Nome para exibição
 
           //Laço de repetição que gera os cards das lâminas
-          for(int i=0; i<muscularPath.length;i++) {
-            String caminho_imagem_capa = "images/laminas/sistemacardiovascular/"+muscularPath[i]+"/capa.jpg";
-            String titulo_card = muscularExibicao[i];
+          for(int i=0; i<cardiovascularPath.length;i++) {
+            String caminho_imagem_capa = "images/laminas/sistemacardiovascular/"+cardiovascularPath[i]+"/capa.jpg";
+            String titulo_card = cardiovascularExibicao[i];
 
             //Gera o card
             widgets.add(
@@ -292,7 +292,7 @@ class SelecaoDeLamina extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage(currentIndex: 1,)));
+                                    builder: (context) => VisualizacaoLamina(categoria: cardiovascularPath[i],)));
                           },
                           child: Column(
                             children: <Widget>[
@@ -323,13 +323,13 @@ class SelecaoDeLamina extends StatelessWidget {
         //Categoria: SISTEMA REPRODUTOR FEMININO
         if(categoria=="Sistema Reprodutor Feminino"){
           backButtonIndex = 2;
-          List muscularPath = ["tuba_uterina", "utero"];//Nome da pasta de armazenamento
-          List muscularExibicao = ["Tuba Uterina", "Útero"];//Nome para exibição
+          List reprodutorFPath = ["tuba_uterina", "utero"];//Nome da pasta de armazenamento
+          List reprodutorFExibicao = ["Tuba Uterina", "Útero"];//Nome para exibição
 
           //Laço de repetição que gera os cards das lâminas
-          for(int i=0; i<muscularPath.length;i++) {
-            String caminho_imagem_capa = "images/laminas/sistemareprodutorfeminino/"+muscularPath[i]+"/capa.jpg";
-            String titulo_card = muscularExibicao[i];
+          for(int i=0; i<reprodutorFPath.length;i++) {
+            String caminho_imagem_capa = "images/laminas/sistemareprodutorfeminino/"+reprodutorFPath[i]+"/capa.jpg";
+            String titulo_card = reprodutorFExibicao[i];
 
             //Gera o card
             widgets.add(
@@ -346,7 +346,7 @@ class SelecaoDeLamina extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage(currentIndex: 1,)));
+                                    builder: (context) => VisualizacaoLamina(categoria: reprodutorFPath[i],)));
                           },
                           child: Column(
                             children: <Widget>[
@@ -377,13 +377,13 @@ class SelecaoDeLamina extends StatelessWidget {
         //Categoria: SISTEMA REPRODUTOR MASCULINO
         if(categoria=="Sistema Reprodutor Masculino"){
           backButtonIndex = 2;
-          List muscularPath = ["prostata", "testiculo"];//Nome da pasta de armazenamento
-          List muscularExibicao = ["Próstata", "Testículo"];//Nome para exibição
+          List reprodutorMPath = ["prostata", "testiculo"];//Nome da pasta de armazenamento
+          List reprodutorMExibicao = ["Próstata", "Testículo"];//Nome para exibição
 
           //Laço de repetição que gera os cards das lâminas
-          for(int i=0; i<muscularPath.length;i++) {
-            String caminho_imagem_capa = "images/laminas/sistemareprodutormasculino/"+muscularPath[i]+"/capa.jpg";
-            String titulo_card = muscularExibicao[i];
+          for(int i=0; i<reprodutorMPath.length;i++) {
+            String caminho_imagem_capa = "images/laminas/sistemareprodutormasculino/"+reprodutorMPath[i]+"/capa.jpg";
+            String titulo_card = reprodutorMExibicao[i];
 
             //Gera o card
             widgets.add(
@@ -400,7 +400,7 @@ class SelecaoDeLamina extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage(currentIndex: 1,)));
+                                    builder: (context) => VisualizacaoLamina(categoria: reprodutorMPath[i],)));
                           },
                           child: Column(
                             children: <Widget>[
@@ -431,13 +431,13 @@ class SelecaoDeLamina extends StatelessWidget {
         //Categoria: SISTEMA RESPIRATÓRIO
         if(categoria=="Sistema Respiratório"){
           backButtonIndex = 2;
-          List muscularPath = ["pulmao", "traqueia"];//Nome da pasta de armazenamento
-          List muscularExibicao = ["Pulmão", "Traqueia"];//Nome para exibição
+          List respiratorioPath = ["pulmao", "traqueia"];//Nome da pasta de armazenamento
+          List respiratorioExibicao = ["Pulmão", "Traqueia"];//Nome para exibição
 
           //Laço de repetição que gera os cards das lâminas
-          for(int i=0; i<muscularPath.length;i++) {
-            String caminho_imagem_capa = "images/laminas/sistemarespiratorio/"+muscularPath[i]+"/capa.jpg";
-            String titulo_card = muscularExibicao[i];
+          for(int i=0; i<respiratorioPath.length;i++) {
+            String caminho_imagem_capa = "images/laminas/sistemarespiratorio/"+respiratorioPath[i]+"/capa.jpg";
+            String titulo_card = respiratorioExibicao[i];
 
             //Gera o card
             widgets.add(
@@ -454,7 +454,7 @@ class SelecaoDeLamina extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage(currentIndex: 1,)));
+                                    builder: (context) => VisualizacaoLamina(categoria: respiratorioPath[i],)));
                           },
                           child: Column(
                             children: <Widget>[

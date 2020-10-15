@@ -87,6 +87,58 @@ class VisualizacaoLamina extends StatelessWidget {
         titulo = Strings.medulaEspinhalTitulo;
         texto = Strings.medulaEspinhalTexto;
       }
+      //SISTEMA CARDIOVASCULAR
+      if(categoria=="aorta"){
+        backButtonIndex = "Sistema Cardiovascular";
+        diretorio = "sistemacardiovascular/aorta";
+        titulo = Strings.aortaTitulo;
+        texto = Strings.aortaTexto;
+      }
+      if(categoria=="veia_media_e_aorta_media"){
+        backButtonIndex = "Sistema Cardiovascular";
+        diretorio = "sistemacardiovascular/veia_media_e_aorta_media";
+        titulo = Strings.veiaMediaTitulo;
+        texto = Strings.veiaMediaTexto;
+      }
+      //SISTEMA REPRODUTOR FEMININO
+      if(categoria=="tuba_uterina"){
+        backButtonIndex = "Sistema Reprodutor Feminino";
+        diretorio = "sistemareprodutorfeminino/tuba_uterina";
+        titulo = Strings.tubaUterinaTitulo;
+        texto = Strings.tubaUterinaTexto;
+      }
+      if(categoria=="utero"){
+        backButtonIndex = "Sistema Reprodutor Feminino";
+        diretorio = "sistemareprodutorfeminino/utero";
+        titulo = Strings.uteroTitulo;
+        texto = Strings.uteroTexto;
+      }
+      //SISTEMA REPRODUTOR MASCULINO
+      if(categoria=="prostata"){
+        backButtonIndex = "Sistema Reprodutor Masculino";
+        diretorio = "sistemareprodutormasculino/prostata";
+        titulo = Strings.prostataTitulo;
+        texto = Strings.prostataTexto;
+      }
+      if(categoria=="testiculo"){
+        backButtonIndex = "Sistema Reprodutor Masculino";
+        diretorio = "sistemareprodutormasculino/testiculo";
+        titulo = Strings.testiculoTitulo;
+        texto = Strings.testiculoTexto;
+      }
+      //SISTEMA RESPIRATÓRIO
+      if(categoria=="pulmao"){
+        backButtonIndex = "Sistema Respiratorio";
+        diretorio = "sistemarespiratorio/pulmao";
+        titulo = Strings.pulmaoTitulo;
+        texto = Strings.pulmaoTexto;
+      }
+      if(categoria=="traqueia"){
+        backButtonIndex = "Sistema Respiratorio";
+        diretorio = "sistemarespiratorio/traqueia";
+        titulo = Strings.traqueiaTitulo;
+        texto = Strings.traqueiaTexto;
+      }
 
 
       //Cria uma lista de cards
