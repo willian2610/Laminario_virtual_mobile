@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io' as io;
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,7 @@ class VisualizacaoLamina extends StatelessWidget {
 
       //Variáveis uteis
       String titulo, texto, diretorio;
+      List lista_de_aumentos;
 
       //Testes para atribuição de valores às variáveis uteis
       //TECIDO CONJUNTIVO
@@ -41,12 +43,14 @@ class VisualizacaoLamina extends StatelessWidget {
         diretorio = "tecidoconjuntivo/cartilaginoso_hialino";
         titulo = Strings.tecidoCartilaginosoHialinoTitulo;
         texto = Strings.tecidoCartilaginosoHialinoTexto;
+        lista_de_aumentos = ["x100", "x400"];
       }
       if(categoria=="tecido_sanguineo"){
         backButtonIndex = "Tecido Conjuntivo";
         diretorio = "tecidoconjuntivo/tecido_sanguineo";
         titulo = Strings.tecidoSanguineoTitulo;
         texto = Strings.tecidoSanguineoTexto;
+        lista_de_aumentos = ["x40", "x100", "x200", "x400"];
       }
       //TECIDO EPITELIAL
       if(categoria=="glandular_exocrino_acinoso_de_secreção_holocrina"){
@@ -54,12 +58,14 @@ class VisualizacaoLamina extends StatelessWidget {
         diretorio = "tecidoepitelial/glandular_exocrino_acinoso_de_secreção_holocrina";
         titulo = Strings.tecidoGlandularExocrinoAcinosoTitulo;
         texto = Strings.tecidoGlandularExocrinoAcinosoTexto;
+        lista_de_aumentos = ["x200", "x400"];
       }
       if(categoria=="glandular_exocrino_tubular_espiralado_simples"){
         backButtonIndex = "Tecido Epitelial";
         diretorio = "tecidoepitelial/glandular_exocrino_tubular_espiralado_simples";
         titulo = Strings.tecidoGlandularExocrinoTubularTitulo;
         texto = Strings.tecidoGlandularExocrinoTubularTexto;
+        lista_de_aumentos = ["x40"];
       }
       //TECIDO MUSCULAR
       if(categoria=="estriado_esqueletico"){
@@ -67,12 +73,14 @@ class VisualizacaoLamina extends StatelessWidget {
         diretorio = "tecidomuscular/estriado_esqueletico";
         titulo = Strings.tecidoEstriadoEsqueleticoTitulo;
         texto = Strings.tecidoEstriadoEsqueleticoTexto;
+        lista_de_aumentos = ["x400"];
       }
       if(categoria=="liso"){
         backButtonIndex = "Tecido Muscular";
         diretorio = "tecidomuscular/liso";
         titulo = Strings.tecidoLisoTitulo;
         texto = Strings.tecidoLisoTexto;
+        lista_de_aumentos = ["x400"];
       }
       //TECIDO NERVOSO
       if(categoria=="cerebelo"){
@@ -80,12 +88,14 @@ class VisualizacaoLamina extends StatelessWidget {
         diretorio = "tecidonervoso/cerebelo";
         titulo = Strings.cerebeloTitulo;
         texto = Strings.cerebeloTexto;
+        lista_de_aumentos = ["x40", "x100", "x400"];
       }
       if(categoria=="medula_espinhal"){
         backButtonIndex = "Tecido Nervoso";
         diretorio = "tecidonervoso/medula_espinhal";
         titulo = Strings.medulaEspinhalTitulo;
         texto = Strings.medulaEspinhalTexto;
+        lista_de_aumentos = ["x40", "x100", "x400"];
       }
       //SISTEMA CARDIOVASCULAR
       if(categoria=="aorta"){
@@ -93,12 +103,14 @@ class VisualizacaoLamina extends StatelessWidget {
         diretorio = "sistemacardiovascular/aorta";
         titulo = Strings.aortaTitulo;
         texto = Strings.aortaTexto;
+        lista_de_aumentos = ["x40"];
       }
       if(categoria=="veia_media_e_aorta_media"){
         backButtonIndex = "Sistema Cardiovascular";
         diretorio = "sistemacardiovascular/veia_media_e_aorta_media";
         titulo = Strings.veiaMediaTitulo;
         texto = Strings.veiaMediaTexto;
+        lista_de_aumentos = ["x40", "x200"];
       }
       //SISTEMA REPRODUTOR FEMININO
       if(categoria=="tuba_uterina"){
@@ -106,12 +118,14 @@ class VisualizacaoLamina extends StatelessWidget {
         diretorio = "sistemareprodutorfeminino/tuba_uterina";
         titulo = Strings.tubaUterinaTitulo;
         texto = Strings.tubaUterinaTexto;
+        lista_de_aumentos = ["x40", "x100", "x400"];
       }
       if(categoria=="utero"){
         backButtonIndex = "Sistema Reprodutor Feminino";
         diretorio = "sistemareprodutorfeminino/utero";
         titulo = Strings.uteroTitulo;
         texto = Strings.uteroTexto;
+        lista_de_aumentos = ["x40", "x100", "x200", "x400"];
       }
       //SISTEMA REPRODUTOR MASCULINO
       if(categoria=="prostata"){
@@ -119,12 +133,14 @@ class VisualizacaoLamina extends StatelessWidget {
         diretorio = "sistemareprodutormasculino/prostata";
         titulo = Strings.prostataTitulo;
         texto = Strings.prostataTexto;
+        lista_de_aumentos = ["x40", "x100", "x200", "x400"];
       }
       if(categoria=="testiculo"){
         backButtonIndex = "Sistema Reprodutor Masculino";
         diretorio = "sistemareprodutormasculino/testiculo";
         titulo = Strings.testiculoTitulo;
         texto = Strings.testiculoTexto;
+        lista_de_aumentos = ["x40", "x100", "x200", "x400"];
       }
       //SISTEMA RESPIRATÓRIO
       if(categoria=="pulmao"){
@@ -132,101 +148,28 @@ class VisualizacaoLamina extends StatelessWidget {
         diretorio = "sistemarespiratorio/pulmao";
         titulo = Strings.pulmaoTitulo;
         texto = Strings.pulmaoTexto;
+        lista_de_aumentos = ["x40", "x100", "x200", "x400"];
       }
       if(categoria=="traqueia"){
         backButtonIndex = "Sistema Respiratorio";
         diretorio = "sistemarespiratorio/traqueia";
         titulo = Strings.traqueiaTitulo;
         texto = Strings.traqueiaTexto;
+        lista_de_aumentos = ["x40", "x100", "x400"];
       }
 
 
       //Cria uma lista de cards
       List<Widget> ConjuntoDeWidgets (){
 
+        //Inicializauma lista de Widgets vazia
         List<Widget> widgets = [];
 
         //Cria uma lista de cards para exibir as imagens das lâminas
         List<Card> listaImagens = new List<Card>();
 
-        //Gera os cards com as imagens das lâminas
-        if(io.File("images/laminas/"+diretorio+"/x40.jpg").exists() != null){
-          listaImagens.add(
-            Card(
-              child: Padding(
-                padding: EdgeInsets.all(5),
-                child: Column(
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          width: 300,
-                          height: 200,
-                          child: ClipRect(
-                            child: Image.asset("images/laminas/"+diretorio+"/x40.jpg", fit: BoxFit.cover,),
-                          ),
-                        )
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Padding(
-                            padding: EdgeInsets.all(5),
-                            child: Row(
-                              children: <Widget>[
-                                Icon(Icons.search, size: 15),
-                                Text("Aumento x40")
-                              ],
-                            )),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
-        }
-        if(io.File("images/laminas/"+diretorio+"/x100.jpg").exists() != null){
-          listaImagens.add(
-            Card(
-              child: Padding(
-                padding: EdgeInsets.all(5),
-                child: Column(
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          width: 300,
-                          height: 200,
-                          child: ClipRect(
-                            child: Image.asset("images/laminas/"+diretorio+"/x100.jpg", fit: BoxFit.contain,),
-                          ),
-                        )
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Padding(
-                            padding: EdgeInsets.all(5),
-                            child: Row(
-                              children: <Widget>[
-                                Icon(Icons.search, size: 15),
-                                Text("Aumento x100")
-                              ],
-                            )),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
-        }
-        if(io.File("images/laminas/"+diretorio+"/x200.jpg").exists() != null){
+        //Gera os cards com as imagens das lâminas de forma iterativa
+        for (int i = 0; i<lista_de_aumentos.length; i++){
           listaImagens.add(
               Card(
                 child: Padding(
@@ -240,7 +183,7 @@ class VisualizacaoLamina extends StatelessWidget {
                             width: 300,
                             height: 200,
                             child: ClipRect(
-                              child: Image.asset("images/laminas/"+diretorio+"/x200.jpg", fit: BoxFit.cover,),
+                              child: Image.asset("images/laminas/"+diretorio+"/"+lista_de_aumentos[i]+".jpg", fit: BoxFit.cover,),
                             ),
                           )
                         ],
@@ -253,56 +196,18 @@ class VisualizacaoLamina extends StatelessWidget {
                               child: Row(
                                 children: <Widget>[
                                   Icon(Icons.search, size: 15),
-                                  Text("Aumento x200")
+                                  Text("Aumento "+lista_de_aumentos[i])
                                 ],
-                              )),
+                              )
+                          ),
                         ],
                       ),
                     ],
                   ),
                 ),
               ),
-          );
+            );
         }
-        if(io.File("images/laminas/"+diretorio+"/x400.jpg").exists() != null){
-          listaImagens.add(
-            Card(
-              child: Padding(
-                padding: EdgeInsets.all(5),
-                child: Column(
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          width: 300,
-                          height: 200,
-                          child: ClipRect(
-                            child: Image.asset("images/laminas/"+diretorio+"/x400.jpg", fit: BoxFit.cover,),
-                          ),
-                        )
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Padding(
-                            padding: EdgeInsets.all(5),
-                            child: Row(
-                              children: <Widget>[
-                                Icon(Icons.search, size: 15),
-                                Text("Aumento x400")
-                              ],
-                            )),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
-        }
-
 
         //Título da lâmina
         widgets.add(
@@ -317,6 +222,7 @@ class VisualizacaoLamina extends StatelessWidget {
             )
         );
 
+        //Cria o carrossel com as imagens da lâmina
         widgets.add(
           SizedBox(
               height: 250.0,
@@ -335,7 +241,8 @@ class VisualizacaoLamina extends StatelessWidget {
                 showIndicator: true,
                 radius: Radius.circular(8.0),
                 autoplay: false,
-              )),
+              )
+          ),
         );
 
         //Texto da Lâmina
@@ -354,7 +261,6 @@ class VisualizacaoLamina extends StatelessWidget {
               ],
             )
         );
-
 
         //Cria botão VOLTAR
         widgets.add(
@@ -383,7 +289,6 @@ class VisualizacaoLamina extends StatelessWidget {
         //Retorna a lista de widgets gerados
         return widgets;
       }
-
 
       return Wrap(
         spacing: 20,
